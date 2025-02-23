@@ -17,7 +17,8 @@ export class CreateUserDto {
   @MinLength(8)
   @MaxLength(50)
   @Matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/, {
-    message: 'Password must contain at least one letter, one number, and one special character.',
+    message:
+      'Password must contain at least one letter, one number, and one special character.',
   })
   readonly password: string;
 
@@ -30,5 +31,4 @@ export class CreateUserDto {
   @IsOptional()
   @MaxLength(50)
   readonly role: string;
-
 }

@@ -25,7 +25,6 @@ export class UserService {
     }
     const userData = plainToInstance(CreateUserDto, createUserDto);
 
-
     const createdUser = await this.repository.addOne(
       this.userModel,
       userData,
@@ -58,7 +57,7 @@ export class UserService {
 
   async update(id: string, updateUserDto: UpdateUserDto, user: User) {
     const userData = plainToInstance(UpdateUserDto, updateUserDto);
- 
+
     const userUpdated = await this.repository.updateOne(
       this.userModel,
       id,

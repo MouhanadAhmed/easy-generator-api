@@ -24,8 +24,6 @@ export const userSchema = new mongoose.Schema(
       enum: ['admin', 'user'],
       default: 'user',
     },
-
-
   },
   { timestamps: true }
 );
